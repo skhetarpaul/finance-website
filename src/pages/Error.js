@@ -4,7 +4,6 @@ import Banner from '../components/Banner'
 import {Link} from 'react-router-dom'
 
 export default function Error() {
-    //return <Hero />
     return (
         <Hero>
             <Banner title = "404" subtitle = "Nothing found on this address">

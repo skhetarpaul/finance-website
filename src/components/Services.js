@@ -1,34 +1,36 @@
 import React, { Component } from 'react'
 import Title from './Title'
-import {FaCocktail, FaHiking, FaShuttleVan, FaBeer} from 'react-icons/fa';
+import {FaPiggyBank, FaCoins} from 'react-icons/fa';
+import { AiTwotoneBank } from "react-icons/ai"
+import { GiTakeMyMoney } from "react-icons/gi";
 
 
 export default class Services extends Component {
     state = {
         services: [
             {
-                icon: <FaCocktail/>,
-                title: "free cocktails",
+                icon: <AiTwotoneBank/>,
+                title: "Safe banking ",
                 info: 
-                    " Lorem ipsum dollar  ipsum dollar amer Lorem ipsum dollar amer"
+                    " With samrat finance banking, you can feel absolutely assured for your value."
             },
             {
-                icon: <FaHiking/>,
-                title: "Endless Hiking",
+                icon: <GiTakeMyMoney/>,
+                title: "high Return rates",
                 info:
-                 "Lorem ipsum dollar amer Lorem ipsu Lorem ipsum dollar amer" 
+                 "Starts with assured 8% to Live value (variable profit depending on commerce of organization)" 
             },
             {
-                icon: <FaShuttleVan/>,
-                title: "Free shuttle",
+                icon: <FaPiggyBank/>,
+                title: "new piggy valley",
                 info:
-                    " Lorem ipsum dollar  ipsum dollar amer Lorem ipsum dollar amer"
+                    "Amazingly from toddlers to senior citizens with high rate of returs catering to your interests"
             },
             {
-                icon: <FaBeer/>,
-                title: "Strongest beer",
+                icon: <FaCoins/>,
+                title: "long term savings",
                 info: 
-                    "Lorem ipsum dollar  ipsum dollar amer Lorem ipsum dollar amer"
+                    "Plans for long term savings yield our customers a high return value on their investment with us"
             }
         ]
     }

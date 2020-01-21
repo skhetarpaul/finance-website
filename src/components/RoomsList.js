@@ -18,7 +18,7 @@ export default function RoomsList({rooms}) {
         <div className = "roomslist-center">
             {
                 rooms.map(item => {
-                    return <Room key = {item.id} room = {item} /> //room is a prop here
+                    return <Room key = {item.id} room = {item} /> //service is a prop here
                 })
             }
         </div>

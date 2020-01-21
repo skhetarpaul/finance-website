@@ -88,13 +88,19 @@ h6 {
 }
 /* end of globals */
 /* Navbar */
+
+.navbar-img {
+  width: 150px;
+  height: 50px;
+}
+
 .navbar {
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   padding: 0.75rem 2rem;
-  background: var(--offWhite);
+  background: var(--mainWhite);
   z-index: 1;
 }
 .nav-header {
@@ -133,7 +139,7 @@ h6 {
 }
 
 .show-nav {
-  height: 100px;
+  height: 150px;
 }
 @media screen and (min-width: 768px) {
   .nav-btn {
@@ -159,13 +165,13 @@ h6 {
 .defaultHero,
 .roomsHero {
   min-height: calc(100vh - 66px);
-  background: url("./images/defaultBcg.jpeg") center/cover no-repeat;
+  background: url("./images2/backgrnd1.jpg") center/cover no-repeat;
   display: flex;
   align-items: center;
   justify-content: center;
 }
 .roomsHero {
-  background-image: url("./images/room-2.jpeg");
+  background-image: url("./images2/bcg2.jpg");
   min-height: 60vh;
 }
 /* End of Hero */

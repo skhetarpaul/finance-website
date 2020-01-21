@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import defaultbcg from '../images/room-1.jpeg'
+import defaultbcg from '../images2/bcg2.jpg'
 import Hero from '../components/Hero'
 import Banner from '../components/Banner'
 import {Link} from 'react-router-dom'
@@ -25,9 +25,9 @@ export default class SingleRoom extends Component {
             return(
                 <div className = "error">
                     <h3>
-                        no such room could be found...
+                        no such policies could be found...
                     </h3>
-                    <Link to = "/rooms" className = "btn-primary">
+                    <Link to = "/services" className = "btn-primary">
                         back to rooms
                     </Link>
                 </div>
@@ -38,9 +38,8 @@ export default class SingleRoom extends Component {
             capacity,
             size,
             price,
-            breakfast,
             extras,
-            pets,
+            familyInsurance,
             images } = room;
             
             // const [mainImg, ...defaultImg] = images
@@ -49,16 +48,16 @@ export default class SingleRoom extends Component {
             console.log(`${defaultImg} are the images`);
         return (
         <>
-            {/* <StyledHero img = {images[0]}> */}
-            <Hero hero= "roomsHero">
+            <StyledHero img = {images[0]}>
+            {/* <Hero hero= "roomsHero"> */}
 
-                <Banner title = {`${name} room`}>
-                    <Link to = "/rooms" className = "btn-primary">
-                        back to rooms
+                <Banner title = {`${name} Finace`} subtitle = {capacity}>
+                    <Link to = "/services" className = "btn-primary">
+                        back to services
                     </Link>
                 </Banner>
-            </Hero>
-            {/* </StyledHero> */}
+            {/* </Hero> */}
+            </StyledHero>
             <section className = "single-room">
                 <div className = "single-room-images">
                     {defaultImg.map((item,index) => {
@@ -72,11 +71,10 @@ export default class SingleRoom extends Component {
                     </article>
                     <article className = "info">
                         <h3>info</h3>
-                        <h6>price: ${price}</h6>
-                        <h6>size: ${size} SQFT</h6> 
-                        <h6>Max capacity: {capacity > 1 ?`${capacity} people`: `${capacity} person`}</h6>
-                        <h6>{pets ? "pets allowed": "no pets allowed"}</h6>
-                        <h6>{breakfast && "free brakfast provided"}</h6>
+                        <h6>price: ${price} per year</h6>
+                        <h6>Duration: {size} year plan</h6> 
+                        {/* <h6>Max capacity: {capacity > 1 ?`${capacity} people`: `${capacity} person`}</h6> */}
+                        <h6>{familyInsurance ? "family insurance provided": "no family insurance"}</h6>
                     </article>
                 </div>
             </section>

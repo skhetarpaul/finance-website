@@ -20,7 +20,8 @@ export default function RoomsFilter({rooms}) {
         minSize,
         maxSize,
         breakfast,
-        pets
+        pets,
+        familyInsurance
     } = context;
 
     //get unique types
@@ -34,19 +35,19 @@ export default function RoomsFilter({rooms}) {
         </option>
     })
 
-    let people = getUnique(rooms, 'capacity');
-    people = people.map((item, index) => {
-        return <option value = {item} key = {index}>
-            {item}
-            </option>
-    })
+    // let people = getUnique(rooms, 'capacity');
+    // people = people.map((item, index) => {
+    //     return <option value = {item} key = {index}>
+    //         {item}
+    //         </option>
+    // })
     return(
         <section className = "filter-container">
-            <Title title = "search rooms" />
+            <Title title = "search for policies" />
             <form className = "filter-form">
 {/* type */}
                 <div className = "form-group">
-                    <label htmlFor= "type">room type</label>
+                    <label htmlFor= "type">policy target</label>
                     <select name = "type"
                     id = "type"
                     value= {type}
@@ -56,7 +57,7 @@ export default function RoomsFilter({rooms}) {
                     </select>
                 </div>
 {/* //guests */}
-                <div className = "form-group">
+                {/* <div className = "form-group">
                     <label htmlFor= "capacity">guests</label>
                     <select name = "capacity"
                     id = "capacity"
@@ -65,12 +66,12 @@ export default function RoomsFilter({rooms}) {
                     onChange = {handleChange} >
                         {people} 
                     </select>
-                </div>
+                </div> */}
 
 {/* money field */}
                 <div className = "form-group">
                     <label htmlFor = "price">
-                        room price ${price}
+                        Yearly pay ${price}
                     </label>
                     <input type = "range" name = "price"
                         min= {minPrice} max = {maxPrice} 
@@ -79,7 +80,7 @@ export default function RoomsFilter({rooms}) {
                 </div>
 {/* size field */}
                 <div className = "form-group">
-                    <label htmlFor = "size">room size</label>
+                    <label htmlFor = "size">Time frame</label>
                     <div className = "size-inputs">
                         <input type = "number" name = "minSize" 
                         id = "size" value = {minSize} onChange = {handleChange}
@@ -92,7 +93,7 @@ export default function RoomsFilter({rooms}) {
                 </div>
 
 {/* extras field */}
-                <div className = "form-group">
+                {/* <div className = "form-group">
                     <div className = "single-extra">
                         <input type = "checkbox" name = "breakfast"
                             id = "breakfast" checked = {breakfast} onChange = {handleChange}
@@ -101,18 +102,17 @@ export default function RoomsFilter({rooms}) {
                             breakfast
                         </label>
                     </div>
-                </div>
+                </div> */}
                 <div className = "form-group">
                     <div className = "single-extra">
-                        <input type = "checkbox" name = "pets"
-                            id = "pets" checked = {pets} onChange = {handleChange}
+                        <input type = "checkbox" name = "familyInsurance"
+                            id = "familyInsurance" checked = {familyInsurance} onChange = {handleChange}
                         />
-                        <label htmlFor = "pets">
-                            pets
+                        <label htmlFor = "familyInsurance">
+                            Family Insurance
                         </label>
                     </div>
                 </div>
-
             </form>
         </section>
     )

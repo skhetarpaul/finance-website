@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import defaultImg from '../images/room-1.jpeg'
+// import defaultImg from '../images/service-1.jpeg'
 
 const StyledHero = styled.header`
     min-height: 60vh;
@@ -8,6 +8,7 @@ const StyledHero = styled.header`
     display: flex;
     align-items: center;
     justify-content: center;
+    opacity: 0.8;
 `;
 
 export default StyledHero 

@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-// import items from './data' 
+import items from './data' 
 import Client from './Contentful'
 
 Client.getEntries({
@@ -23,7 +23,7 @@ class RoomProvider extends Component {
         minSize: 0,
         maxSize: 0,
         breakfast: false,
-        pets: false
+        familyInsurance: false
     };
 
     formatData(items) {
@@ -41,12 +41,13 @@ class RoomProvider extends Component {
     // get data
     getData = async () => {
         try{
-            let response = await Client.getEntries({
-                content_type: "beachResortRoomExample",
-                order: "fields.capacity"
-                //to reverse order put a - sign before fields
-            });
-            let rooms = this.formatData(response.items);
+            // let response = await Client.getEntries({
+            //     content_type: "beachResortRoomExample",
+            //     order: "fields.capacity"
+            //     //to reverse order put a - sign before fields
+            // });
+            // let rooms = this.formatData(response.items);
+            let rooms = this.formatData(items);
             console.log(rooms);
             let featuredRooms = rooms.filter(room => room.featured === true);
             let maxPrice = Math.max(...rooms.map(item => 
@@ -122,7 +123,7 @@ class RoomProvider extends Component {
             minSize,
             maxSize,
             breakfast,
-            pets
+            familyInsurance
         } = this.state;
 
         //all the rooms here
@@ -161,9 +162,9 @@ class RoomProvider extends Component {
             )
         }
 
-        if(pets) {
+        if(familyInsurance) {
             tempRooms = tempRooms.filter(
-                room => room.pets === true
+                room => room.familyInsurance === true
             )
         }
 

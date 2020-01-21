@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import logo from '../images/logo.svg'
+import logo from '../images2/logo.PNG'
 import {FaAlignRight} from 'react-icons/fa'
 import {Link} from 'react-router-dom'
 
@@ -19,7 +19,7 @@ export default class Navbar extends Component {
                 <div className = "nav-center">
                     <div className = "nav-header">
                         <Link to = "/">
-                            <img src = {logo} alt = "Tripolo Resorts"></img>
+                            <img src = {logo} className = "navbar-img" alt = "samrat investments"></img>
                         </Link>
                         <button type = "button" className = "nav-btn" 
                          onClick = {this.handleToggle}>
@@ -32,7 +32,7 @@ export default class Navbar extends Component {
                             <Link to ="/">Home</Link>
                         </li>
                         <li>
-                            <Link to ="/rooms">Rooms</Link>
+                            <Link to ="/services">Rooms</Link>
                         </li>
                     </ul> */}
                     <ul className = {this.state.isOpen? "nav-links show-nav":
@@ -41,7 +41,13 @@ export default class Navbar extends Component {
                         <Link to ="/">Home</Link>
                     </li>
                     <li>
-                        <Link to ="/rooms">Rooms</Link>
+                        <Link to ="/services">Services</Link>
+                    </li>
+                    {/* <li>
+                        <Link to ="/services">Funding</Link>
+                    </li> */}
+                    <li>
+                        <Link to ="/signup">SignUp</Link>
                     </li>
                     </ul>
 
